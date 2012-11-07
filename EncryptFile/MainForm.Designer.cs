@@ -61,6 +61,7 @@
 			this.txtFileName.Size = new System.Drawing.Size(285, 25);
 			this.txtFileName.TabIndex = 3;
 			this.txtFileName.TextChanged += new System.EventHandler(this.txtFileName_TextChanged);
+			this.txtFileName.Enter += new System.EventHandler(this.textBox_Enter);
 			// 
 			// lblFileName
 			// 
@@ -104,6 +105,7 @@
 			this.txtSaveFileName.Size = new System.Drawing.Size(285, 25);
 			this.txtSaveFileName.TabIndex = 6;
 			this.txtSaveFileName.TextChanged += new System.EventHandler(this.txtSaveFileName_TextChanged);
+			this.txtSaveFileName.Enter += new System.EventHandler(this.textBox_Enter);
 			// 
 			// label2
 			// 
@@ -124,6 +126,7 @@
 			this.txtPassword1.Size = new System.Drawing.Size(285, 25);
 			this.txtPassword1.TabIndex = 9;
 			this.txtPassword1.TextChanged += new System.EventHandler(this.txtPassword1_TextChanged);
+			this.txtPassword1.Enter += new System.EventHandler(this.textBox_Enter);
 			// 
 			// label3
 			// 
@@ -144,6 +147,7 @@
 			this.txtPassword2.Size = new System.Drawing.Size(285, 25);
 			this.txtPassword2.TabIndex = 11;
 			this.txtPassword2.TextChanged += new System.EventHandler(this.txtPassword2_TextChanged);
+			this.txtPassword2.Enter += new System.EventHandler(this.textBox_Enter);
 			// 
 			// lblPassword2
 			// 
@@ -268,8 +272,8 @@
 			this.Controls.Add(this.lblFileName);
 			this.Controls.Add(this.txtFileName);
 			this.Font = new System.Drawing.Font("メイリオ", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
 			this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+			this.MinimumSize = new System.Drawing.Size(510, 271);
 			this.Name = "MainForm";
 			this.Text = "ファイルを暗号化";
 			this.Shown += new System.EventHandler(this.MainForm_Shown);

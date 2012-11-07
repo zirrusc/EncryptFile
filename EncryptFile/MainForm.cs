@@ -108,6 +108,7 @@ namespace EncryptFile
 				saveFileDialog1.Filter = normalFileDialogFilter;
 				txtPassword2.Visible = lblPassword2.Visible = false;
 			}
+			txtFileName.Text = txtPassword1.Text = txtPassword2.Text = txtSaveFileName.Text = "";
 		}
 
 		private void btnClose_Click(object sender, EventArgs e)
@@ -167,6 +168,7 @@ namespace EncryptFile
 				Encrypt.DecryptFile(txtFileName.Text, txtSaveFileName.Text, txtPassword1.Text);
 				SetMessage("復号化に成功しました", "対象：" + txtFileName.Text + "\r\n保存先：" + txtSaveFileName.Text);
 				btnOpen.Visible = true;
+				btnOpen.Focus();
 			}
 			catch (System.Security.Cryptography.CryptographicException ex)
 			{
@@ -240,5 +242,11 @@ namespace EncryptFile
 				SetMessage(ex.Message, ex.ToString(), Color.Orange);
 			}
 		}
+
+		private void textBox_Enter(object sender, EventArgs e)
+		{
+			((TextBox)sender).SelectAll();
+		}
+
 	}
 }
